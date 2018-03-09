@@ -1,0 +1,25 @@
+<div class="dashboard-content">
+  <div>
+    <nav class="navbar navbar-default" style="background-color:  #4DD0E1; font-size: large">
+      <div class="container-fluid">
+        <div class="navbar-brand" href="#" id="frst_tab">
+          <img md-card-image src="assets/maersk.png" class="img_size"></div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="#">{{heading}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <div id="sideHover">
+      <a href="#" class="glyphicon glyphicon-dashboard"> Dashboard</a>
+      <a [routerLink]="['/cucumber']" class="glyphicon glyphicon-menu-hamburger" (click)="headToggle('Cucumber')"> Cucumber</a>
+      <a [routerLink]="['/karma']" class="glyphicon glyphicon-menu-hamburger" (click)="headToggle('Karma')"> Karma</a>
+      <a [routerLink]="['/junit']" class="glyphicon glyphicon-menu-hamburger" (click)="headToggle('Junit')"> Junit</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

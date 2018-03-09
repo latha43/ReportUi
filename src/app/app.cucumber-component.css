@@ -1,0 +1,125 @@
+/* The side navigation menu */
+.sidenav {
+    height:100%; /* 100% Full-height */
+    width: 183px;/* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+   
+    left: 0;
+    background-color: white; /* Black*/
+    top: 64px;
+    padding-top: 26px; /* Place content 60px from the top */
+    
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 22px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #81818B;
+    
+    
+}
+
+/* When you mouse over the navigation links, change their color */
+
+#sideHover a:hover{
+	color: #9de0ef;
+}
+
+#frst_tab{
+	font-size: larger;
+    background-color: white;
+    height: 67px;
+    width: 15%;
+    position: static;
+    padding: 26px 13px 29px 14px;
+    margin: -12px -1px -6px -31px;
+}
+
+
+#card1{
+	    top: 45px;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2),0 3px 10px 0 rgba(0, 0, 0, 0.2);
+        height: 200px;
+          
+	
+}
+.dashboard-content{
+   background-color:#eff2f6;
+   position: fixed;
+   height: 100%;
+   min-height: 100%;
+   width: 100%;
+   min-width: 100%;
+}
+
+#header-view{
+	background-color: white;
+}
+
+.card-text{
+    color: grey;
+}
+
+.card-title{
+    color: grey;
+        top: 0px;
+    margin: 0px;
+    padding: 9px 0px 0px 12px;
+    border-width: 1px;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgrey;
+    border-bottom-style: solid;
+    width: 100%;
+}
+
+.table_content{
+  color: grey;  
+}
+
+.passed{
+    color:#009933;
+
+}
+
+.failed{
+  color:#cc0000;  
+}
+
+.pending{
+    color:#ff9900;
+}
+canvas{
+        width: 130px;
+    height: 110px
+}
+#able-view{
+    font-size:1px;
+}
+.border_view{
+        
+            
+            border-radius: 5px;
+}
+
+.border_view_passed{
+    border: 1px solid #009933;
+   padding: 3px 9px 3px 8px;
+}
+.border_view_failed{
+    border: 1px solid #cc0000;
+     padding: 3px 8px 3px 13px;
+}
+.border_view_pending{
+ padding: 3px;
+    border: 1px solid #ff9900;
+}
+.table_size{
+    margin: 75px 32px 0px 195px; font-size: 12px; width: 1026px;
+}
+.percent{
+        margin: -60px 55px 55px 38px;
+    font-size: 20px;
+    color: grey;
+}

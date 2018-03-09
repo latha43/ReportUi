@@ -1,0 +1,206 @@
+<div style="font-size: 16px;">
+  <div>
+    <div class="row" style="margin: 31px  00 00 191px; font-size: 12px;">
+      <div class="col-sm-3">
+        <div class="card" id="card1">
+          <div class="card-title">
+            <h5>No. of Test</h5>
+          </div>
+          <div class="card-block">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+              <tr>
+                <td align="left" valign="top"> No. of Passed</td>
+                <td align="right" valign="top" class="passed">12</td>
+              </tr>
+              <tr>
+                <th colspan="3" height="10"><img src="http://image.exct.net/lib/fe5d15707c62017d701c/m/1/2a6bb4e0-ea72-4c7c-b1e9-cafe5fea8b70.gif" width="1"
+                    height="10" border="0" style="display:block;"></th>
+              </tr>
+              <tr>
+                <td align="left" valign="top"> No. of Failed</td>
+                <td align="right" valign="top" class="failed">12</td>
+              </tr>
+              <tr>
+                <th colspan="3" height="10"><img src="http://image.exct.net/lib/fe5d15707c62017d701c/m/1/2a6bb4e0-ea72-4c7c-b1e9-cafe5fea8b70.gif" width="1"
+                    height="10" border="0" style="display:block;"></th>
+              </tr>
+              <tr>
+                <td align="left" valign="top"> No. of Pending</td>
+                <td align="right" valign="top" class="pending">12</td>
+              </tr>
+              <tr>
+                <th colspan="3" height="10"><img src="http://image.exct.net/lib/fe5d15707c62017d701c/m/1/2a6bb4e0-ea72-4c7c-b1e9-cafe5fea8b70.gif" width="1"
+                    height="10" border="0" style="display:block;"></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" id="card1">
+          <div class="card-title">
+            <h5>Lines of code</h5>
+          </div>
+          <div class="card-block">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+              <tr>
+                <td align="left" valign="top"> No. of files</td>
+                <td align="right" valign="top" style="color:blue">12</td>
+
+              </tr>
+              <tr>
+                <th colspan="3" height="10"><img src="http://image.exct.net/lib/fe5d15707c62017d701c/m/1/2a6bb4e0-ea72-4c7c-b1e9-cafe5fea8b70.gif" width="1"
+                    height="10" border="0" style="display:block;"></th>
+              </tr>
+              <tr>
+                <td align="left" valign="top"> No. of directories</td>
+                <td align="right" valign="top" style="color:orange">12</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-6">
+        <div class="card" id="card1" style="width:450px;">
+          <div class="card-title">
+            <h5>Test Status</h5>
+          </div>
+          <div class="card-block">
+            <table>
+              <tr>
+                <td>
+                  <div style="width: 110px;
+    height: 110px margin: -10px 00 00 00;">
+                    <canvas baseChart [data]="Passed_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                      [colors]="Passed_color" [options]="opts"></canvas>
+                    <h5 class="percent">53%</h5>
+                  </div>
+                </td>
+                <td>
+                  <div style="width: 110px;
+    height: 110px margin: -10px 00 00 00;">
+                    <canvas baseChart [data]="Failed_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                      [colors]="Failed_color" [options]="opts"></canvas>
+                    <h5 class="percent">30%</h5>
+                  </div>
+                </td>
+                <td>
+                  <div style="width: 110px;
+    height: 110pxmargin: -10px 00 00 00;">
+                    <canvas baseChart [data]="Pending_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)" [colors]="Pending_color" [options]="opts"></canvas>
+                    <h5 class="percent">17%</h5>
+                  </div>
+                </td>
+
+              </tr>
+            </table>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container table_size" id="table-view">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Feature Name</th>
+          <th>Status</th>
+          <th>Total</th>
+          <th>Passed</th>
+          <th>Failed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-md-4">VM Service getting data by id</td>
+          <td class="col-md-3" class="passed"><span class="border_view border_view_passed">PASSED</span></td>
+          <td class="col-md-1">5</td>
+          <td class="col-md-2">3</td>
+          <td class="col-md-2">2</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">Vessel Service getting data by id</td>
+          <td class="col-md-3" class="failed"><span class="border_view border_view_failed">FAILED</span></td>
+          <td class="col-md-1">5</td>
+          <td class="col-md-2">1</td>
+          <td class="col-md-2">4</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">Transdoc Service getting data by id</td>
+          <td class="col-md-3" class="failed"><span class="border_view border_view_failed">FAILED</span></td>
+          <td class="col-md-1">6</td>
+          <td class="col-md-2">3</td>
+          <td class="col-md-2">3</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">VM Service getting all data</td>
+          <td class="col-md-3" class="pending"><span class="border_view border_view_pending">PENDING</span></td>
+          <td class="col-md-1">9</td>
+          <td class="col-md-2">2</td>
+          <td class="col-md-2">7</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">Vessel Service getting all data</td>
+          <td class="col-md-3" class="passed"><span class="border_view border_view_passed">PASSED</span></td>
+          <td class="col-md-1">7</td>
+          <td class="col-md-2">3</td>
+          <td class="col-md-2">4</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">VM Service getting data by id</td>
+          <td class="col-md-3" class="pending"><span class="border_view border_view_pending">PENDING</span></td>
+          <td class="col-md-1">5</td>
+          <td class="col-md-2">3</td>
+          <td class="col-md-2">2</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">Vessel Service getting data by id</td>
+          <td class="col-md-3" class="failed"><span class="border_view border_view_failed">FAILED</span></td>
+          <td class="col-md-1">5</td>
+          <td class="col-md-2">1</td>
+          <td class="col-md-2">4</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">MCL Service getting all data</td>
+          <td class="col-md-3" class="passed"><span class="border_view border_view_passed">PASSED</span></td>
+          <td class="col-md-1">9</td>
+          <td class="col-md-2">2</td>
+          <td class="col-md-2">7</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">Vessel Service getting data by id</td>
+          <td class="col-md-3" class="pending"><span class="border_view border_view_pending">PENDING</span></td>
+          <td class="col-md-1">5</td>
+          <td class="col-md-2">1</td>
+          <td class="col-md-2">4</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">VM Service getting all data</td>
+          <td class="col-md-3" class="passed"><span class="border_view border_view_passed">PASSED</span></td>
+          <td class="col-md-1">9</td>
+          <td class="col-md-2">2</td>
+          <td class="col-md-2">7</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">Vessel Service getting data by id</td>
+          <td class="col-md-3" class="failed"><span class="border_view border_view_failed">FAILED</span></td>
+          <td class="col-md-1">5</td>
+          <td class="col-md-2">1</td>
+          <td class="col-md-2">4</td>
+        </tr>
+        <tr>
+          <td class="col-md-4">MCL Service getting data by id</td>
+          <td class="col-md-3" class="passed"><span class="border_view border_view_passed">PASSED</span></td>
+          <td class="col-md-1">5</td>
+          <td class="col-md-2">3</td>
+          <td class="col-md-2">2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

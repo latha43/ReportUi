@@ -1,0 +1,295 @@
+<div>
+  <div class="card" id="main_card">
+    <div class="card-block">
+      <h4 align="center" id="heading"><b>Microservice POC</b></h4>
+      <p class="card-subtitle mb-2 text-muted" align="center">Last Updated on Friday, 18 August, 2017 | 9.30 a.m</p>
+      <div class="card-footer" id="card_foot">
+        <table align="center">
+          <tr class="list-inline" id="list">
+            <td class="list-inline-item">
+              <div id="circle" style="background-color:#EF5350;"></div>
+            </td>
+            <td class="list-inline-item td">
+              <table>
+                <tr>MCL</tr>
+                <tr style="font-size: 12px;">Node</tr>
+              </table>
+            </td>
+            <td class="list-inline-item padLeft">
+              <div id="circle" style="background-color:#1565C0;"></div>
+            </td>
+            <td class="list-inline-item td">
+              <table>
+                <tr>Transdoc</tr>
+                <tr style="font-size: 12px;">Node</tr>
+              </table>
+            </td>
+            <td class="list-inline-item padLeft">
+              <div id="circle" style="background-color:#4E342E;"></div>
+            </td>
+            <td class="list-inline-item td">
+              <table>
+                <tr>Vessel</tr>
+                <tr style="font-size: 12px;">Node</tr>
+              </table>
+            </td>
+            <td class="list-inline-item padLeft">
+              <div id="circle" style="background-color:#F57C00;"></div>
+            </td>
+            <td class="list-inline-item td">
+              <table>
+                <tr>VM</tr>
+                <tr style="font-size: 12px;">Node</tr>
+              </table>
+            </td>
+            <td class="list-inline-item padLeft">
+              <div id="circle" style="background-color:#FFEB3B;"></div>
+            </td>
+            <td class="list-inline-item td">
+              <table>
+                <tr>Container</tr>
+                <tr style="font-size: 12px;">Java</tr>
+              </table>
+            </td>
+            <td class="list-inline-item padLeft">
+              <div id="circle" style="background-color:#00C853;"></div>
+            </td>
+            <td class="list-inline-item td">
+              <table>
+                <tr>Task</tr>
+                <tr style="font-size: 12px;">Java</tr>
+              </table>
+            </td>
+            <td class="list-inline-item padLeft">
+              <div id="circle" style="background-color:#3949AB;"></div>
+            </td>
+            <td class="list-inline-item td">
+              <table>
+                <tr>Microservice UI</tr>
+                <tr style="font-size: 12px;">Angular</tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card_alignment" id="card_content">
+    <div class="row" id="card_size">
+      <div>
+        <div class="col-sm-3">
+          <div class="card" id="card1">
+            <div class="card-title">
+              <h5>MCL</h5>
+            </div>
+            <div class="card-block">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+                <tr>
+                  <td align="left" valign="top" class="total">{{mcl.testCases}}</td>
+                  <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+                  <td align="center" valign="top" class="update">4% from <br>last update</td>
+                  <td align="right" valign="top">
+                    <div style="     width: 75px; height: 125px; margin: -15px 00 00 00;">
+                      <canvas *ngIf="MCL_doughnutChartData && mclpercentage" baseChart [data]="MCL_doughnutChartData" [chartType]="doughnutChartType" (chartClick)="chartClicked($event)" [colors]="MCLdoughnutColors" [options]="opts"></canvas>
+                      <h5 class="percent">{{mclpercentage}}%</h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">Pass-{{mcl.passed}}</td>
+                  <td align="left" valign="top"></td>
+                  <td align="center" valign="top">Failed-{{mcl.failed}}</td>
+                  <td align="right" valign="top">Pending-{{mcl.pending}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" id="card1">
+            <div class="card-title">
+              <h5>Transdoc</h5>
+            </div>
+            <div class="card-block">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+                <tr>
+                  <td align="left" valign="top" class="total">5</td>
+                  <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+                  <td align="center" valign="top" class="update">4% from <br>last update</td>
+                  <td align="right" valign="top">
+                    <div style="     width: 75px; height: 125px; margin: -15px 00 00 00;">
+                      <canvas baseChart [data]="Transdoc_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)" [colors]="Transdoc_doughnutColors" [options]="opts"></canvas>
+                      <h5 class="percent">75%</h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">Passed</td>
+                  <td align="left" valign="top"></td>
+                  <td align="center" valign="top">Failed</td>
+                  <td align="right" valign="top">Pending</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" id="card1">
+            <div class="card-title">
+              <h5>Vessel</h5>
+            </div>
+            <div class="card-block">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+                <tr>
+                  <td align="left" valign="top" class="total">8</td>
+                  <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+                  <td align="center" valign="top" class="update">4% from <br>last update</td>
+                  <td align="right" valign="top">
+                    <div style="     width: 75px; height: 125px; margin: -15px 00 00 00;">
+                      <canvas baseChart [data]="Vessel_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                        [colors]="Vessel_doughnutColors" [options]="opts"></canvas>
+                      <h5 class="percent">80%</h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">Passed</td>
+                  <td align="left" valign="top"></td>
+                  <td align="center" valign="top">Failed</td>
+                  <td align="right" valign="top">Pending</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" id="card1">
+            <div class="card-title">
+              <h5>VM</h5>
+            </div>
+            <div class="card-block">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+                <tr>
+                  <td align="left" valign="top" class="total">8</td>
+                  <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+                  <td align="center" valign="top" class="update">4% from <br>last update</td>
+                  <td align="right" valign="top">
+                    <div style="     width: 75px; height: 125px; margin: -15px 00 00 00;">
+                      <canvas baseChart [data]="VM_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                        [colors]="VM_doughnutColors" [options]="opts"></canvas>
+                      <h5 class="percent">58%</h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">Passed</td>
+                  <td align="left" valign="top"></td>
+                  <td align="center" valign="top">Failed</td>
+                  <td align="right" valign="top">Pending</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="card_size">
+      <div>
+        <div class="col-sm-3">
+          <div class="card" id="card1">
+            <div class="card-title">
+              <h5>Container</h5>
+            </div>
+            <div class="card-block">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+                <tr>
+                  <td align="left" valign="top" class="total">6</td>
+                  <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+                  <td align="center" valign="top" class="update">4% from <br>last update</td>
+                  <td align="right" valign="top">
+                    <div style="     width: 75px; height: 125px; margin: -15px 00 00 00;">
+                      <canvas baseChart [data]="Container_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)" [colors]="Container_doughnutColors" [options]="opts"></canvas>
+                      <h5 class="percent">71%</h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">Passed</td>
+                  <td align="left" valign="top"></td>
+                  <td align="center" valign="top">Failed</td>
+                  <td align="right" valign="top">Pending</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" id="card1">
+            <div class="card-title">
+              <h5>Task</h5>
+            </div>
+            <div class="card-block">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+                <tr>
+                  <td align="left" valign="top" class="total">7</td>
+                  <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+                  <td align="center" valign="top" class="update">4% from <br>last update</td>
+                  <td align="right" valign="top">
+                    <div style="     width: 75px; height: 125px; margin: -15px 00 00 00;">
+                      <canvas baseChart [data]="Task_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                        [colors]="Task_doughnutColors" [options]="opts"></canvas>
+                      <h5 class="percent">84%</h5>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">Passed</td>
+                  <td align="left" valign="top"></td>
+                  <td align="center" valign="top">Failed</td>
+                  <td align="right" valign="top">Pending</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" id="card1">
+            <div class="card-title">
+              <h5>Angular Inbound UI</h5>
+            </div>
+            <div class="card-block">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_content">
+                <tr>
+                  <td align="left" valign="top" class="total">6</td>
+                  <td><span class="glyphicon glyphicon-arrow-up"></span></td>
+                  <td align="center" valign="top" class="update">4% from <br>last update</td>
+
+                  <td align="right" valign="top">
+                    <div style="     width: 75px; height: 125px; margin: -15px 00 00 00;">
+                      <canvas baseChart [data]="Angular_doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)" [colors]="Angular_doughnutColors" [options]="opts"></canvas>
+                      <h6 class="percent">74%</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">Passed</td>
+                  <td valign="top"></td>
+                  <td align="center" valign="top">Failed</td>
+                  <td align="right" valign="top">Pending</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

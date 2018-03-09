@@ -1,0 +1,148 @@
+/* The side navigation menu */
+.sidenav {
+    height:100%; /* 100% Full-height */
+    width: 183px;/* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+   
+    left: 0;
+    background-color: white; /* Black*/
+    top: 64px;
+    padding-top: 26px; /* Place content 60px from the top */
+    
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 22px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #81818B;
+    
+    
+}
+
+/* When you mouse over the navigation links, change their color */
+
+#sideHover a:hover{
+	color: #9de0ef;
+}
+
+#frst_tab{
+	font-size: larger;
+    background-color: white;
+    height: 67px;
+    width: 15%;
+    position: static;
+    padding: 26px 13px 29px 14px;
+    margin: -12px -1px -6px -31px;
+}
+
+#card1{
+	top: 45px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	font-size:15px;
+        width: 239px;
+    height: 200px;
+}
+.dashboard-content{
+   background-color:#eff2f6;
+   position: fixed;
+   height: 100%;
+   min-height: 100%;
+   width: 100%;
+   min-width: 100%;
+}
+
+#main_card{
+	   margin: 30px 42px 0px 216px;
+       width: 1048px;
+       height: 40%;
+}
+
+#heading{
+	padding-top: 63px;
+}
+#card_foot{
+	    height: 44px;
+    margin: 140px 00 00 00;
+	    background-color: white;
+}
+#card_size{
+    margin:00 00 00 200px;
+}
+
+.card_alignment{
+      
+        margin: -20px 00 00 00;
+}
+
+.card-title{
+    color: grey;
+        top: 0px;
+    margin: 0px 0px 0px 0px;
+ 
+    padding: 9px 0px 0px 12px;
+    border-width: 1px;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgrey;
+    border-bottom-style: solid;
+    width: 100%;
+}
+.passed{
+    color:#009933;
+
+}
+
+.failed{
+  color:#cc0000;  
+}
+
+.pending{
+    color:#ff9900;
+    
+}
+
+#list{
+        margin: 00 4px 00 206px;
+         color: grey;
+}
+
+#font_color{
+    color: grey;
+}
+
+#card_content{
+    font-size:7px;
+     color: grey;
+}
+
+    #circle {
+      width: 12px;
+      height: 12px;
+     -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      margin: -15px 00 00 00;
+    }
+
+.padLeft{
+    padding-left: 20px;
+}
+
+.sub_head{
+     font-size: 12px;
+     margin: 10px;
+}
+.percent{
+    margin: -39px 49px 55px 177px; font-size:15px;
+}
+.total{
+    font-size: 33px;
+}
+.update{
+    font-size: 14px;
+}
+
+td{
+        white-space: nowrap;
+}
